@@ -3,7 +3,7 @@
 # 📦 Archive
 ## A Huffman coding implementation for file compression and decompression.
 
-This project builds two programs (the encoder and the decoder). Both programs use the Huffman Coding technique to compress or decompress bytes within a file. The user will need to pipe in desired files to encode or decode. *To see what each file does, visit Files.*
+This project builds two programs (the encoder and the decoder). Both programs use the Huffman Coding technique to compress or decompress bytes within a file. The user will need to pipe in desired files to encode or decode.
 
 ## What you need
 
@@ -13,7 +13,7 @@ In order to compile this program you'll need the Makefile provided, encode.c and
 
 To build the program, you will need [Clang](https://askubuntu.com/a/1058535) installed. Once installed, run the following commands below. 
 
-Once inside the Arcive directory, run:
+Once inside the Archive directory, run:
 
 ```
 $ make all
