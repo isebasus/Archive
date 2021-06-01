@@ -1,11 +1,11 @@
+SOURCE = ./src
 EXECA = encode
 EXECB = decode
 
-SOURCES_A = encode.c io.c pq.c node.c huffman.c code.c stack.c
-OBJECTS_A = $(SOURCES_A:%.c=%.o)
+SOURCEA = src/code.o src/huffman.o src/io.o src/node.o src/pq.o src/stack.o src/encode.o
+SOURCEB = src/code.o src/huffman.o src/io.o src/node.o src/pq.o src/stack.o src/decode.o
 
-SOURCES_B = decode.c io.c node.c huffman.c code.c stack.c pq.c
-OBJECTS_B = $(SOURCES_B:%.c=%.o)
+OBJECTS = $(patsubst $(SOURCE)/%.c,$(SOURCE)/%.o,$(wildcard $(SOURCE)/*.c))
 
 CC = clang
 CFLAGS = -Wall -Wextra -Werror -Wpedantic
@@ -13,22 +13,22 @@ LFLAGS = -lm
 
 .PHONY: all clean format
 
-all: $(EXECA) $(EXECB) $(EXECC) $(EXECD) 
+all: $(EXECA) $(EXECB)
 
-$(EXECA): $(OBJECTS_A)
-	$(CC) -o $@ $^ $(LFLAGS)
+$(EXECA): $(OBJECTS)
+	$(CC) $(CFLAGS) $(SOURCEA) -o $(EXECA)
 
-$(EXECB): $(OBJECTS_B)
-	$(CC) -o $@ $^ $(LFLAGS)
+$(EXECB): $(OBJECTS)
+	$(CC) $(CFLAGS) $(SOURCEB) -o $(EXECB)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c -o $@ $< $(CFLAGS)
 
 format:
 	clang-format -i -style=file *.[ch]
 
 clean:
-	rm -rf $(EXECA) $(EXECB) $(OBJECTS_A) $(OBJECTS_B)
+	rm -rf $(EXECA) $(EXECB) $(OBJECTS) 
 
 scan-build: clean
 	scan-build make 
