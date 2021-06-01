@@ -2,9 +2,10 @@ EXECA = encode
 EXECB = decode
 SRC = ./src/util
 IO = ./src/io
+HMAN = ./src/huffman
 
-SOURCEA = $(SRC)/code.o $(SRC)/huffman.o $(IO)/io.o $(SRC)/node.o $(SRC)/pq.o $(SRC)/stack.o src/encode.o
-SOURCEB = $(SRC)/code.o $(SRC)/huffman.o $(IO)/io.o $(SRC)/node.o $(SRC)/pq.o $(SRC)/stack.o src/decode.o
+SOURCEA = $(SRC)/code.o $(HMAN)/huffman.o $(IO)/io.o $(SRC)/node.o $(SRC)/pq.o $(SRC)/stack.o src/encode.o
+SOURCEB = $(SRC)/code.o $(HMAN)/huffman.o $(IO)/io.o $(SRC)/node.o $(SRC)/pq.o $(SRC)/stack.o src/decode.o
 
 OBJECTSA = $(SOURCEA:%.c=%.o)
 OBJECTSB = $(SOURCEB:%.c=%.o)
@@ -13,7 +14,7 @@ CC = clang
 CFLAGS = -Wall -Wextra -Werror -Wpedantic
 LFLAGS = -lm
 
-.PHONY: all clean format
+.PHONY: all clean
 
 all: $(EXECA) $(EXECB)
 
@@ -25,9 +26,6 @@ $(EXECB): $(OBJECTSB)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $< $(CFLAGS)
-
-format:
-	clang-format -i -style=file *.[ch]
 
 clean:
 	rm -rf $(EXECA) $(EXECB) $(OBJECTSA) $(OBJECTSB) 

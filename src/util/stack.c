@@ -3,7 +3,7 @@
 
 #include "stack.h"
 
-#include "huffman.h"
+#include "../huffman/huffman.h"
 #include "node.h"
 
 #include <assert.h>

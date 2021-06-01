@@ -4,7 +4,7 @@
 #include "util/code.h"
 #include "util/defines.h"
 #include "util/header.h"
-#include "util/huffman.h"
+#include "huffman/huffman.h"
 #include "io/io.h"
 #include "util/node.h"
 #include "util/pq.h"

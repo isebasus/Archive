@@ -1,9 +1,9 @@
 #ifndef __HUFFMAN_H__
 #define __HUFFMAN_H__
 
-#include "code.h"
-#include "defines.h"
-#include "node.h"
+#include "../util/code.h"
+#include "../util/defines.h"
+#include "../util/node.h"
 
 #include <stdint.h>
 

@@ -3,10 +3,10 @@
 
 #include "huffman.h"
 
-#include "node.h"
-#include "pq.h"
-#include "stack.h"
-#include "variables.h"
+#include "../util/node.h"
+#include "../util/pq.h"
+#include "../util/stack.h"
+#include "../util/variables.h"
 
 #include <inttypes.h>
 #include <stdint.h>
