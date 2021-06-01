@@ -1,4 +1,4 @@
-> :warning: **This Project is a modified school project** and thus no students of Dr.Long should be looking at my source code.
+> :warning: **This Project is a modified school project** and thus no students of Dr. Long should be looking at my source code.
 
 # 📦 Archive
 ## A Huffman coding implementation for file compression and decompression.
