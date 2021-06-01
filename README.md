@@ -1,4 +1,4 @@
-> :warning: **This Project is a modified school project** and thus no students of Dr. Long should be looking at my source code.
+> :warning: **This Project is a modified school project** and thus no students of Professor Long should be looking at my source code.
 
 # 📦 Archive
 ## A Huffman coding implementation for file compression and decompression.
@@ -65,9 +65,9 @@ $ make clean
 ### 📚 Sources
 * [The C Programming Language - 2nd Edition](https://drive.google.com/file/d/0BxImv9GQ06DcNjc1MTk0N2ItZmJmNC00YTM0LWFmN2UtMGQ4ZmE3Y2E1YzU4/view) - IO Inspiration 
 * [Introduction to Algorithms 3rd Edition](https://github.com/RbkGh/Free-Algorithm-Books/blob/master/book/Introduction%20to%20Algorithms%20-%20Third%20Edition.pdf) - ADT Implementation Inspiration
-* Sample Files Provided by my Professor Dr. Long
+* Sample Files Provided by my Professor Long
 * Stackoverflow 
 
 ### 📋 Licensing
-This project is licensed under the MIT license. I hope others can learn from my code, but you know who you are if you shouldn't be looking at this code (aka Dr. Long Students). Other than that, all of this code is completely original and you can modify anything as much as you want!
+This project is licensed under the MIT license. I hope others can learn from my code, but you know who you are if you shouldn't be looking at this code (aka Professor Long Students). Other than that, all of this code is completely original and you can modify anything as much as you want!
 
