@@ -25,15 +25,16 @@ uint64_t total_bytes_read = 0;
 // nbytes: number of bytes to read
 //
 int read_bytes(int infile, uint8_t *buf, int nbytes) {
-    char c = '\0';
     int rb = 0;
     bytes_read = 0;
     for (int i = 0; i < nbytes; i++) { // Read until nbytes
         // Check read for EOF
-        if (rb = read(infile, &c, 1), rb != 0) {
-            bytes_read += 1;
-            total_bytes_read += 1;
-            buf[i] = c; // Assign symbol to buf of index i
+        if (rb = read(infile, buf + bytes_read, nbytes - bytes_read), rb > 0) {
+            bytes_read += rb;
+            total_bytes_read += rb;
+            if ((int)bytes_read == nbytes) { // Max bytes to read
+                break;
+            }
         } else {
             break;
         }
@@ -49,9 +50,14 @@ int read_bytes(int infile, uint8_t *buf, int nbytes) {
 //
 int write_bytes(int outfile, uint8_t *buf, int nbytes) {
     int wb = 0;
+    int bytes_w = 0;
     for (int i = 0; i < nbytes; i++) { // Read until nbytes
-        if (wb = write(outfile, &buf[i], 1), wb != 0) {
-            bytes_written += 1;
+        if (wb = write(outfile, buf + bytes_w, nbytes - bytes_w), wb > 0) {
+            bytes_w += wb;
+            bytes_written += wb;
+            if (bytes_w == nbytes) { // Max bytes to write
+                break;
+            }
         } else { // if write fails
             break;
         }
