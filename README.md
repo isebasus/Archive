@@ -69,5 +69,5 @@ $ make clean
 * Stackoverflow 
 
 ### 📋 Licensing
-This project is licensed under the MIT license. I hope others can learn from my code, but you know who your are if you shouldn't be looking at this code (aka Dr. Long Students). Other than that, all of this code is completely original and you can modify anything as much as you wish!
+This project is licensed under the MIT license. I hope others can learn from my code, but you know who you are if you shouldn't be looking at this code (aka Dr. Long Students). Other than that, all of this code is completely original and you can modify anything as much as you want!
 
