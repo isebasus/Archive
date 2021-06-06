@@ -1,6 +1,6 @@
 > :warning: **This Project is a modified school project** and thus no students of CSE 13s should be looking at my source code.
 
-# 📦 Archive [(https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/isebasus/Archive/blob/master/LICENSE)
+# 📦 Archive [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/isebasus/Archive/blob/master/LICENSE)
 ## A Huffman coding implementation for file compression and decompression.
 
 This project builds two programs (the encoder and the decoder). Both programs use the Huffman Coding technique to compress or decompress bytes within a file. The user will need to pipe in desired files to encode or decode.
