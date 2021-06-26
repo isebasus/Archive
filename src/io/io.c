@@ -67,8 +67,6 @@ int write_bytes(int outfile, uint8_t *buf, int nbytes) {
 
 // Reads individual bits from infile
 //
-// Inpired by Eugene's lab section pseudocode
-//
 // infile: file to read from
 // *bit: bit to return
 //
@@ -92,8 +90,6 @@ bool read_bit(int infile, uint8_t *bit) {
 
 // Writes code to outfile
 //
-// Inpired by Eugene's lab section pseudocode
-//
 // outfile: file to write to
 // *c: code pointer
 //
@@ -116,8 +112,6 @@ void write_code(int outfile, Code *c) {
 }
 
 // Flushes left over codes in buffer
-//
-// Inpired by Eugene's lab section pseudocode
 //
 // outfile: file to read from
 //
